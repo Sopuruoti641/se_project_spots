@@ -1,0 +1,13 @@
+.class {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.class__logo {
+  width: 104px;
+  height: 16px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
