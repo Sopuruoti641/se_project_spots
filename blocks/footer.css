@@ -11,4 +11,9 @@
   font-weight: 400;
   line-height: 16px;
   text-align: left;
+  width: 104px;
+  height: 16px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
 }
