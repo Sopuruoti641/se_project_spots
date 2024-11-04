@@ -5,7 +5,7 @@
   padding: 20px;
 }
 
-.footer__logo img {
+.footer__text {
   margin-right: 10px;
   font-size: 16px;
   font-weight: 400;
@@ -16,4 +16,6 @@
   display: flex;
   margin-bottom: 20px;
   justify-content: center;
+  opacity: 70%;
+  color: #212121;
 }

@@ -1,21 +1,23 @@
-# Project 3: Spots
+Here is a README.md file template based on your project details and the screenshot you provided:
 
-### Overview  
+# Spots
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+A web-based profile and gallery page named Spots that showcases user profiles and a collection of image cards. Users can view the profile of a historical figure, Bessie Coleman, and browse through a curated gallery of places. Each image card features a title and a like button, enabling users to interact with the content.
+
+## Project Features
+
+Profile Section: Displays a user's avatar, name, and title, with options to edit the profile and create a new post.
+Image Cards: A gallery of image cards, each with a title and a heart icon for likes.
+Footer: Simple footer with the year and project name.
+Screenshot
+
+# Technologies Used
+
+HTML: The structure of the page.
+CSS: Custom styling for layout, typography, and responsive design.
+JavaScript (optional for extended functionality like interactivity on buttons).
+
+## Deployment
+
+This webpage is deployed to GitHub pages.
+Deployment link - https://sopuruoti641.github.io/se_project_spots
