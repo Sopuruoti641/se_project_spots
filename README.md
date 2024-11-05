@@ -20,4 +20,4 @@ JavaScript (optional for extended functionality like interactivity on buttons).
 ## Deployment
 
 This webpage is deployed to GitHub pages.
-Deployment link - https://sopuruoti641.github.io/se_project_spots
+Deployment link - https://sopuruoti641.github.io/se_project_spots/
