@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .card__title {
@@ -35,6 +36,7 @@
 
 .card__like-btn:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
