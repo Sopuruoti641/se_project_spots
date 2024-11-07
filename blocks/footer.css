@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 60px;
 }
 
 .footer__text {
+  margin-top: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;

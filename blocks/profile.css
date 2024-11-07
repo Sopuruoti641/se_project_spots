@@ -1,7 +1,8 @@
 .profile {
   display: flex;
+  max-width: 1280px;
   padding: 34px 0 20px;
-  margin: auto;
+  margin: 0 auto;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
@@ -103,6 +104,7 @@
     width: 80px;
   }
   .profile__name {
+    line-height: 20px;
     font-size: 20px;
     margin-bottom: 6px;
     max-width: 288px;
