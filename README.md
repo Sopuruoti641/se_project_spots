@@ -21,3 +21,8 @@ JavaScript (optional for extended functionality like interactivity on buttons).
 
 This webpage is deployed to GitHub pages.
 Deployment link - https://sopuruoti641.github.io/se_project_spots/
+
+## videos
+
+I don't know how to add a video to read.me file, it is saying that it can't exceed 32 mb but it does everytime I screen record.
+I need help
