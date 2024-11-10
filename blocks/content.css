@@ -1,6 +1,7 @@
 .content {
-  display: inline;
+  display: block;
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 @media screen and {
