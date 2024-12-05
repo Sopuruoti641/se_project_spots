@@ -39,6 +39,11 @@
   opacity: 40%;
 }
 
+.modal__close-btn:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -91,6 +96,11 @@
   .modal__close-btn {
     top: 12px;
     right: 12px;
+  }
+
+  .modal__close-btn:hover {
+    cursor: pointer;
+    opacity: 100%;
   }
 
   .modal__submit-btn {
