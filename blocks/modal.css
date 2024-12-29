@@ -20,7 +20,7 @@
   opacity: 1;
 }
 
-#edit-modal .modal__content {
+.modal__content {
   background-color: #fff;
   padding: 20px;
   width: 730px;
@@ -156,7 +156,8 @@
   .modal {
     padding: 0 10px;
   }
-  .modal__container {
+
+  .modal__content {
     padding: 12px;
     max-width: 300px;
   }
