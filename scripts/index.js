@@ -65,7 +65,7 @@ function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
 }
 
-function handleEditformSubmit(evt) {
+function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
   profileDescription.textContent = editModalDesInput.value;
@@ -79,6 +79,8 @@ function handleAddCardSubmit(evt) {
   const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardEl = getCardElement(inputValues);
   cardList.prepend(cardEl);
+  cardNameInput.value = "";
+  cardLinkInput.value = "";
   closeModal(cardModal);
 }
 
@@ -107,10 +109,6 @@ function getCardElement(data) {
     previewModalImageEl.alt = data.name;
   });
 
-  previewModalClosebtn.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   cardNameEl.textContent = data.name;
   cardImage.src = data.link;
   cardImage.alt = data.name;
@@ -136,7 +134,11 @@ cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-editFormElement.addEventListener("submit", handleEditformSubmit);
+previewModalClosebtn.addEventListener("click", () => {
+  closeModal(previewModal);
+});
+
+editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach((item) => {
