@@ -23,11 +23,18 @@
 .modal__content {
   background-color: #fff;
   padding: 20px;
-  width: 730px;
   position: relative;
   box-sizing: border-box;
   border-radius: 10px;
   padding: 36px 50px 32px;
+}
+
+.modal__content_type_edit {
+  width: 730px;
+}
+
+.modal__content_type_post {
+  width: 730px;
 }
 
 .modal__content_type_preview {
@@ -161,6 +168,13 @@
     padding: 12px;
     max-width: 300px;
   }
+  .modal__content_type_edit {
+    max-width: 300px;
+  }
+
+  .modal__content_type_post {
+    max-width: 300px;
+  }
 
   .modal__title {
     font-size: 20px;
@@ -174,9 +188,9 @@
   }
 
   .modal__close_type_preview {
-    width: 40px;
-    height: 40px;
-    top: 41px;
+    top: 12px;
+    right: 12px;
+    bottom: 4px;
   }
 
   .modal__close-btn:hover {
@@ -186,5 +200,17 @@
 
   .modal__submit-btn {
     width: 100%;
+  }
+
+  .modal__image {
+    object-fit: contain;
+    width: 100%;
+    height: 80vh;
+    border-radius: 10px;
+  }
+
+  .modal__caption {
+    text-align: center;
+    margin-top: auto;
   }
 }
