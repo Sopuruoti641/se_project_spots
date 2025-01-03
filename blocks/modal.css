@@ -47,10 +47,20 @@
   padding: 36px 50px 32px;
 }
 
-.modal__image {
-  object-fit: contain;
+.modal__image-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 75vw;
   max-height: 75vh;
+  border-radius: 10px;
+}
+
+.modal__image {
+  object-fit: contain;
+  max-width: 40vw;
+  max-height: 70vh;
   border-radius: 10px;
 }
 
