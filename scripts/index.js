@@ -129,6 +129,20 @@ function handleKeydown(event) {
   }
 }
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+  modal.addEventListener("mousedown", (event) => {
+    if (event.target === modal) {
+      closeModal(modal);
+    }
+  });
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("mousedown", handleOverlayClick);
+}
+
 editModalBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDesInput.value = profileDescription.textContent;
