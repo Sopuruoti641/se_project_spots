@@ -139,6 +139,14 @@
   box-sizing: border-box;
 }
 
+.modal__input_type_error {
+  border: 1px solid rgba(225, 0, 0, 0.6);
+}
+
+.modal__error {
+  color: #ff0000b2;
+}
+
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;
@@ -162,6 +170,10 @@
   border-radius: 8px;
   border: none;
   transition: background 0.3s;
+}
+
+.modal__button-error {
+  opacity: 50%;
 }
 
 .modal__button:hover {
