@@ -120,6 +120,15 @@ function getCardElement(data) {
   return cardElement;
 }
 
+function handleKeydown(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_is-opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
 editModalBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDesInput.value = profileDescription.textContent;
@@ -146,6 +155,8 @@ cardModalCloseBtn.addEventListener("click", () => {
 previewModalClosebtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
+
+document.addEventListener("keydown", handleKeydown);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
