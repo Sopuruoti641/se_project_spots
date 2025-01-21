@@ -172,7 +172,7 @@
   transition: background 0.3s;
 }
 
-.modal__button-error {
+.modal__button-disable {
   opacity: 50%;
 }
 

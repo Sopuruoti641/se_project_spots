@@ -1,5 +1,3 @@
-enableValidation(settings);
-
 const initialCards = [
   {
     name: "Val Thorens",
@@ -62,6 +60,12 @@ const cardList = document.querySelector(".cards__list");
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("mousedown", handleO);
+  //modal.addEventListener("mousedown", (event) => {
+  // if (event.target === modal) {
+  //  closeModal(modal);
+  // }
+  // })
 }
 
 function closeModal(modal) {
@@ -131,17 +135,25 @@ function handleKeydown(event) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  document.addEventListener("keydown", handleKeydown);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+
+  document.removeEventListener("keydown", handleKeydown);
+}
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
   modal.addEventListener("mousedown", (event) => {
-    if (event.target === modal) {
+    if (event.target.classList.contains("modal_is-opened")) {
       closeModal(modal);
     }
   });
-}
-
-function handleOverlayClick(modal) {
-  modal.classList.remove("modal_is-opened");
-  modal.removeEventListener("mousedown", handleOverlayClick);
-}
+});
 
 editModalBtn.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
@@ -169,8 +181,6 @@ cardModalCloseBtn.addEventListener("click", () => {
 previewModalClosebtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
-
-document.addEventListener("keydown", handleKeydown);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleAddCardSubmit);
