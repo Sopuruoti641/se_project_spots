@@ -138,7 +138,7 @@ function openModal(modal) {
   });
 }
 
-function closeModal(modal) {
+function handleOverlayClick(modal) {
   modal.classList.remove("modal_is-opened");
   modal.removeEventListener("mousedown", handleOverlayClick);
 }
