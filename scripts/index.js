@@ -58,20 +58,6 @@ const previewModalClosebtn = previewModal.querySelector(
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
 
-function openModal(modal) {
-  modal.classList.add("modal_is-opened");
-  document.addEventListener("mousedown", handleO);
-  //modal.addEventListener("mousedown", (event) => {
-  // if (event.target === modal) {
-  //  closeModal(modal);
-  // }
-  // })
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
-}
-
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
