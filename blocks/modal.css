@@ -172,7 +172,7 @@
   transition: background 0.3s;
 }
 
-.modal__button-disable {
+.modal__button_disable {
   opacity: 50%;
 }
 
