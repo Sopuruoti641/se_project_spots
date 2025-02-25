@@ -95,7 +95,7 @@
   padding: 0;
   margin: 0;
   border: none;
-  background: transparent url("/images/CloseBtn.png") center no-repeat;
+  background: transparent url("../images/CloseBtn.png") center no-repeat;
   background-size: 35px 35px;
   opacity: 0.4;
   cursor: pointer;

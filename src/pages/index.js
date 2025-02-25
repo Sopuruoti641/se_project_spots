@@ -1,3 +1,12 @@
+import "./index.css";
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js";
+
+import headerLgo from "../images/Logo.svg";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -57,6 +66,9 @@ const previewModalClosebtn = previewModal.querySelector(
 //card Elements
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
+
+const headerImg = document.getElementById("header-logo");
+headerImg.src = headerLgo;
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
@@ -175,3 +187,5 @@ initialCards.forEach((item) => {
   const cardEl = getCardElement(item);
   cardList.append(cardEl);
 });
+
+enableValidation(settings);
