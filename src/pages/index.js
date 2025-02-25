@@ -6,6 +6,9 @@ import {
 } from "../scripts/validation.js";
 
 import headerLgo from "../images/Logo.svg";
+import avatarPic from "../images/avatar.jpg";
+import pencilPic from "../images/Pencil.svg";
+import plusPic from "../images/Plus.svg";
 
 const initialCards = [
   {
@@ -67,8 +70,15 @@ const previewModalClosebtn = previewModal.querySelector(
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
 
+//imported Images
 const headerImg = document.getElementById("header-logo");
 headerImg.src = headerLgo;
+const avatarImg = document.getElementById("avatar-img");
+avatarImg.src = avatarPic;
+const pencilImg = document.getElementById("pencil-icon");
+pencilImg.src = pencilPic;
+const plusIcon = document.getElementById("plus-icon");
+plusIcon.src = plusPic;
 
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
