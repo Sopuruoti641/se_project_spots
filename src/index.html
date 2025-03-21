@@ -9,13 +9,25 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <title>Spots Project</title>
   </head>
+
   <body class="page">
     <header class="header">
       <img id="header-logo" alt="Spots logo" class="header__logo" />
     </header>
+
     <main class="content">
       <section class="profile page__section">
-        <img id="avatar-img" alt="Bessie Coleman" class="profile__avatar" />
+        <div class="profile__avatar-container">
+          <button class="profile__avatar-btn">
+            <img
+              src="<%=require('./images/pencil-light.svg')%>"
+              alt="Pencil icon"
+              class="profile__pencil-icon"
+            />
+          </button>
+
+          <img id="avatar-img" alt="Bessie Coleman" class="profile__avatar" />
+        </div>
 
         <div class="profile__column">
           <h1 class="profile__name">Bessie Coleman</h1>
@@ -26,10 +38,12 @@
             <img id="pencil-icon" alt="Pencil icon" />Edit Profile
           </button>
         </div>
+
         <button type="button" class="profile__add-btn">
           <img id="plus-icon" alt="Plus icon" />New Post
         </button>
       </section>
+
       <section class="cards page__section">
         <ul class="cards__list">
           <template id="card-template">
@@ -37,8 +51,9 @@
               <img class="card__image" src="" alt="" />
               <div class="card__footer">
                 <h2 class="card__title"></h2>
+
                 <button
-                  aria-label="Like card"
+                  aria-label="Liked card"
                   class="card__like-btn"
                   type="button"
                 ></button>
@@ -53,9 +68,11 @@
         </ul>
       </section>
     </main>
+
     <footer class="footer">
       <p class="footer__text">2023 &copy; Spots</p>
     </footer>
+
     <div class="modal" id="edit-modal">
       <div class="modal__content modal__content_type_edit">
         <button
@@ -63,6 +80,7 @@
           type="button"
           class="modal__close modal__close_type_edit"
         ></button>
+
         <h2 class="modal__title">Edit Profile</h2>
         <form id="profile-form" class="modal__form" novalidate>
           <label for="profile-name-input" class="modal__label">
@@ -77,8 +95,10 @@
               minlength="2"
               maxlength="40"
             />
+
             <span id="profile-name-input-error" class="modal__error"></span>
           </label>
+
           <label for="profile-description-input" class="modal__label">
             Description
             <input
@@ -91,11 +111,13 @@
               minlength="2"
               maxlength="200"
             />
+
             <span
               id="profile-description-input-error"
               class="modal__error"
             ></span>
           </label>
+
           <button type="submit" id="modal__button-error" class="modal__button">
             Save
           </button>
@@ -110,6 +132,7 @@
           class="modal__close modal__close_type_post"
           type="button"
         ></button>
+
         <h2 class="modal__title">New post</h2>
         <form id="card-form" class="modal__form" novalidate>
           <label for="card-link-input" class="modal__label">
@@ -123,12 +146,14 @@
               autocomplete="url"
               required
             />
+
             <span id="card-link-input-error" class="modal__error"></span>
           </label>
-          <label for="card-name-input" class="modal__label">
+
+          <label for="card-caption-input" class="modal__label">
             Caption
             <input
-              id="card-name-input"
+              id="card-caption-input"
               type="text"
               class="modal__input"
               name="name"
@@ -138,7 +163,8 @@
               minlength="2"
               maxlength="30"
             />
-            <span id="card-name-input-error" class="modal__error"></span>
+
+            <span id="card-caption-input-error" class="modal__error"></span>
           </label>
           <button
             type="submit"
@@ -150,6 +176,7 @@
         </form>
       </div>
     </div>
+
     <div class="modal" id="preview-modal">
       <div class="modal__content modal__content_type_preview">
         <button
@@ -157,14 +184,59 @@
           type="button"
           class="modal__close modal__close_type_preview"
         ></button>
+
         <img class="modal__image" src="" alt="" />
         <p class="modal__caption"></p>
       </div>
     </div>
-    <!-- <script type="module" src="./scripts/index.js"></script> -->
-    <!-- src="../src/images/Logo.svg" -->
-    <!-- src="./images/avatar.jpg" -->
-    <!-- src="./images/Pencil.svg" -->
-    <!-- src="./images/Plus.svg" -->
+
+    <div class="modal" id="avatar-modal">
+      <div class="modal__content">
+        <button
+          aria-label="Close modal"
+          type="button"
+          class="modal__close"
+        ></button>
+
+        <h2 class="modal__title">Edit profile avatar</h2>
+        <form class="modal__form" id="profile-avatar-form" novalidate>
+          <label class="modal__label" for="profile-avatar-form">
+            Profile Picture
+            <input
+              id="profile-avatar-input"
+              type="url"
+              class="modal__input"
+              placeholder="avatar goes here"
+              name="avatar"
+              required
+            />
+            <span id="profile-avatar-input-error" class="modal__error"></span>
+          </label>
+          <button type="submit" id="modal__button-error" class="modal__button">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- TODO - style the modal -->
+    <div class="modal" id="delete-modal">
+      <div class="modal__content">
+        <button
+          aria-label="Close modal"
+          class="modal__close"
+          type="button"
+        ></button>
+
+        <h3 class="modal__title">
+          Are you sure you want to delete this image?
+        </h3>
+        <form id="delete-form" class="modal__form" novalidate>
+          <button class="modal__button" type="submit">Delete</button>
+          <button class="modal__button modal__cancel-button" type="button">
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
