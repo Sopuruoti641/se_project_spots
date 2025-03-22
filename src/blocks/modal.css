@@ -227,6 +227,18 @@
     padding: 0 10px;
   }
 
+  #avatar-modal .modal__content {
+    border-radius: 8px;
+    padding: 12px;
+    top: 239px;
+    width: 300px;
+    margin-bottom: 595px;
+  }
+
+  #avatar-modal .modal__label {
+    margin-bottom: 14px;
+  }
+
   .modal__content {
     padding: 12px;
     max-width: 300px;
@@ -241,6 +253,12 @@
 
   .modal__content_type_preview {
     padding: 1px;
+  }
+
+  #preview-modal .modal__image {
+    margin-left: -65px;
+    border-radius: 4px;
+    max-width: 87vw;
   }
 
   .modal__title {
@@ -260,9 +278,9 @@
   }
 
   .modal__close_type_preview {
-    top: -39.1px;
-    right: 1px;
     bottom: 4px;
+    right: -62px;
+    top: -39.1px;
   }
 
   .modal__close-btn:hover {
@@ -282,8 +300,9 @@
   }
 
   .modal__caption {
-    text-align: center;
     margin-top: auto;
+    text-align: center;
+    margin-left: -65px;
   }
 
   #delete-modal .modal__content {
