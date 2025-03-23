@@ -27,6 +27,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   padding: 36px 50px 32px;
+  width: 50%;
 }
 
 .modal__content_type_edit {
@@ -89,13 +90,11 @@
 .modal__close {
   position: absolute;
   top: 32px;
-  right: 50px;
+  right: 30px;
   width: 40px;
   height: 40px;
-  padding: 0;
-  margin: 0;
   border: none;
-  background: transparent url("/images/CloseBtn.png") center no-repeat;
+  background: transparent url("../images/close-icon-gray.svg") center no-repeat;
   background-size: 35px 35px;
   opacity: 0.4;
   cursor: pointer;
@@ -181,9 +180,63 @@
   cursor: pointer;
 }
 
+#delete-modal .modal__form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#delete-modal .modal__content {
+  width: 800px;
+  height: 200px;
+}
+
+#delete-modal .modal__close {
+  top: -5px;
+  right: -45px;
+  background-image: url("../images/close-btn.svg");
+}
+
+#delete-modal .modal__title {
+  width: 706px;
+}
+
+#delete-form .modal__button {
+  background: #ff6565;
+  color: #212121;
+  gap: 20px;
+}
+
+#delete-form .modal__button:hover {
+  background: #ff3333;
+}
+
+#delete-form .modal__cancel-button {
+  background: #fff;
+  color: #212121;
+  border: solid #212121;
+}
+
+#delete-form .modal__cancel-button:hover {
+  background: #212121;
+  color: #fff;
+}
+
 @media screen and (max-width: 627px) {
   .modal {
     padding: 0 10px;
+  }
+
+  #avatar-modal .modal__content {
+    border-radius: 8px;
+    padding: 12px;
+    top: 239px;
+    width: 300px;
+    margin-bottom: 595px;
+  }
+
+  #avatar-modal .modal__label {
+    margin-bottom: 14px;
   }
 
   .modal__content {
@@ -200,6 +253,12 @@
 
   .modal__content_type_preview {
     padding: 1px;
+  }
+
+  #preview-modal .modal__image {
+    margin-left: -65px;
+    border-radius: 4px;
+    max-width: 87vw;
   }
 
   .modal__title {
@@ -219,9 +278,9 @@
   }
 
   .modal__close_type_preview {
-    top: -39.1px;
-    right: 1px;
     bottom: 4px;
+    right: -62px;
+    top: -39.1px;
   }
 
   .modal__close-btn:hover {
@@ -241,7 +300,33 @@
   }
 
   .modal__caption {
-    text-align: center;
     margin-top: auto;
+    text-align: center;
+    margin-left: -65px;
+  }
+
+  #delete-modal .modal__content {
+    width: 300px;
+    height: 208px;
+  }
+
+  #delete-modal .modal__title {
+    width: 276px;
+  }
+
+  #delete-modal .modal__form {
+    display: grid;
+    margin: -20px;
+    gap: 12px;
+  }
+
+  #delete-form .modal__button {
+    width: 156px;
+    height: 52px;
+  }
+
+  #delete-modal .modal__close {
+    top: -49px;
+    right: 1px;
   }
 }
